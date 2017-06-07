@@ -12,11 +12,11 @@ router.get('/*/*', function (req, res, next) {
   var regex = /\/([0-9]*)\/([0-9]*)/g // Regex to look for /XXX/XXX (Where X is replaced with numbers)
   var imgW = parseInt(getMatches(req.url, regex, 1)[0]) || 0
   var imgH = parseInt(getMatches(req.url, regex, 2)[0]) || 0
-  if (imgW == 0 || imgH == 0){
+  if (!imgW > 0 || !imgH > 0 || !typeof imgW === 'number' || !typeof imgH === 'number'){
     next("Error: Height/Width must be greater than 0 and not a string"); 
   }
   if (imgW > 2000 | imgH > 2000)
-    next("Error: Height/Width must be less than or euqal to 2000px");
+    next("Error: Height/Width must be less than or equal to 2000px");
   var images = fs.readdirSync('public/img/raw/');
   console.log(images.randomElement());
   sharp('public/img/raw/' + images.randomElement())
