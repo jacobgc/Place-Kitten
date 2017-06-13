@@ -12,7 +12,7 @@
   <meta property="og:type" content="product">
   <meta property="og:title" content="{{Place.cat}} -- Use cats as placeholders!">
   <meta property="og:url" content="https://place.cat">
-  <meta property="og:image" content="https://place.cat/300/300">
+  <meta property="og:image" content="https://place.cat/600/600">
 
   <script type="application/ld+json">
     {
@@ -34,8 +34,7 @@
     }
   </script>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css" crossorigin="anonymous">
 
 </head>
 
@@ -44,14 +43,29 @@
   <div class="container fluid">
     <div class="jumbotron">
       <div class="container">
-        <h1>{{Place.cat}} -- Home</h1>
-        <p>This site aims to provide an easy to use service to use cute cats as as placeholder images. Just a note, we don't support sizes greater than 2000px</p>
+        <h1>{{Place.cat}}</h1>
+        <p>This service provides an easy to use API to use cute cats as as placeholder images. Just a note, we don't support
+          sizes greater than 2000px</p>
         <p>
-          Simply use: <code><pre>&lt;img src="https://place.cat/300/200"&gt;</pre></code> to show a cute cat with the dimentions;
-          Width: 300px and Height: 200px.
+          Simply use: <code>&lt;img src="https://place.cat/[c-bw]/300/200"&gt;</code> to show a cute cat with the dimentions;
+          Width: <code>300px</code> and Height: <code>200px</code> replace [c-bw] with either <code>c</code> for colour and
+          <code>bw</code> for a black and white image.
           <br><br> View the source below to see a real life example:
         </p>
-        <img src="https://place.cat/64/64">
+
+        <div class="row">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <center>
+              <img src="https://place.cat/c/100/100">
+            </center>
+          </div>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <center>
+              <img src="https://place.cat/bw/100/100">
+            </center>
+          </div>
+        </div>
+
         <h6>Ignore this, its just for the domain: M'encanta petits gats bonics</h6>
       </div>
     </div>
