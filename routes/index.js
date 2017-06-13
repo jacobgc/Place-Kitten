@@ -1,3 +1,6 @@
+var Raven = require('raven');
+Raven.config('https://0820b5cefbd5488481e863ab28e45092:33b82dbf2a0e4aeb83a69ad5245a4d76@sentry.io/170774').install();
+
 var express = require('express');
 var router = express.Router();
 var sharp = require('sharp'); // Image processing
